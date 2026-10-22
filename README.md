@@ -71,4 +71,4 @@ It also needs the following initial conditions defined:
 
 ## Author
 
-Euan Riach — [LinkedIn](www.linkedin.com/in/euan-riach) · [GitHub](https://github.com/EuanRiach)
+Euan Riach — [LinkedIn](https://www.linkedin.com/in/euan-riach) · [GitHub](https://github.com/EuanRiach)
