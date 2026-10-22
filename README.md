@@ -1,5 +1,7 @@
 # Multivariate Kalman Filter
 
+## Overview
+
 The multivariate Kalman filter is used to reduce noise in linear systems. It is designed to be used when modelling a stochostic process which has random noise in both the process and measurements. It requires knowing at least approximate equations for the state transition step.
 
 [**Project Report**](report/Multivariate_Kalman_Filter_Report.pdf)
@@ -9,7 +11,7 @@ The multivariate Kalman filter is used to reduce noise in linear systems. It is 
 ![Project screenshot](docs/Falling_object.png)
 ![Project screenshot](docs/Raw_Data.png)
 
-## Overview
+## Motivation
 
 This project was built to learn about a new method for filtering data and object oriented programming.
 
