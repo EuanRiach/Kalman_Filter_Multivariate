@@ -37,14 +37,15 @@ The equations I used in the filter can be found in:
 
 ### Prerequisites
 
-- Basic linear algebra.
-- An understanding of multivariate Gaussian distributions and covariance matrices.
+- Linear algebra
+- Multivariate Gaussian distributions
+- Covariance matrices
 
 ## How It Works
 
-The filter compares error in its own estimate and a new measurement to produce a new estimate with less error than both the old estimate and the measurement.
+The filter compares error in its old estimate and a new measurement. It then produces a new estimate with less error.
 
-1. **Input:** The filter class requires 3 integer inputs to initialise, dimension of the state vector, dimension of the measurement vector and dimension of the driving force. After initialising the filter needs the following constant matrices:
+1. **Input:** The filter class requires 3 integer inputs to initialise: dimension of the state vector, dimension of the measurement vector and dimension of the driving force. After initialising, the filter needs the following constant matrices assigned:
 - state transition matrix (F) determining the equations governing the process,
 - measurement function (H) converting the measurement to the same form as the state space,
 - process covariance matrix (Q),
@@ -55,14 +56,14 @@ if there is a driving force:
 It also needs the following initial conditions defined:
 - inital state space,
 - initial estimate covariance matrix (P), initially very large if the initial state space is uncertain.
-4. **Process:** The filter works by compares covariance matrices to calculate the Kalmain gain matrix (K). The Kalman gain determines how much weight should be given to the measurement and the estimated position.
+4. **Process:** The filter works by comparing covariance matrices to calculate the Kalman gain matrix (K). K determines how much weight should be given to the measurement and the estimated position.
 5. **Output:** The filter outputs a new state vector.
 
 ## Results and Key Learnings
 
 - **Outcome:** The filter reduced RMSE by approximately 50% compared to sensor data.
-- **Technical learning:** Explain a skill or concept you developed.
-- **Challenge:** Describe a problem you encountered and how you addressed it.
+- **Technical learning:** Object oriented programming to streamline repetitive functions.
+- **Challenge:** The most challenging part is ensuring the process variance is well defined. It needs to accurately reflect the system otherwise the filter is unable to gain trust in its estimates over time. There are many valid matrices for a given problem and experimentation is often required.
 
 ## Future Improvements
 
